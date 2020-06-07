@@ -1,0 +1,33 @@
+<template class="viewport">
+  <require from="views/viewport.css"></require>
+  <require from='views/locale-dropdown'></require>
+  <require from='views/applicant-card'></require>
+  <require from='views/applicant-form'></require>
+
+  <!-- Header-->
+  <div class="viewport-header">
+    <div class="container">
+      <h1 t="header.title"></h1>
+      <locale-dropdown></locale-dropdown>
+    </div>
+  </div>
+
+  <!-- Body-->
+  <div class="viewport-body container">
+    <div class="applicants-info">
+      <span t="main.infoTextPre"></span>&nbsp;<span><strong>${applicants.length}</strong></span>&nbsp;<span class="last" t="main.infoTextSuf"></span>
+      <button click.delegate="onAddPress()" type="button" class="btn btn-primary" t="main.addButtonText"></button>
+    </div>
+    
+    <!-- Cards-->
+    <div class="applicants-container">
+      <template repeat.for="applicant of applicants">
+        <applicant-card applicant.bind="applicant" edit-callback.call="onEditPress(applicant)" delete-callback.call="onDeletePress(applicant)"></applicant-card>
+      </template>
+    </div>
+  </div>
+
+  <!-- Form-->
+  <applicant-form applicant.bind="editingApplicant" serversideinvalidation.bind="applicantserversideinvalidation" save-callback.call="onSavePress(editingApplicant)"></applicant-form>
+
+</template>

@@ -1,0 +1,28 @@
+<template class="applicant-card ${hasHiddenCls ? 'hidden' : ''} ${applicant.hired ? 'hired' : ''}">
+  <require from="views/applicant-card.css"></require>
+
+  <div with.bind="applicant" class="card">
+    <!-- Avatar-->
+    <div class="card-img-top avatar-${avatarCls}"></div>
+
+    <div class="card-body">
+      <!-- Text-->
+      <h5 class="card-title">${name} ${familyName}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">${eMailAddress}</h6>
+      <p class="card-text"><span t="card.age"></span>: ${age}</p>
+      <p class="card-text"><span t="card.address"></span>: ${address}</p>
+      <p class="card-text"><span t="card.origin"></span>: ${countryOfOrigin}</p>
+      
+      <!-- Hired badge-->
+      <div if.bind="applicant.hired" class="banner-hired"></div>
+      
+      <!-- Floating buttons-->
+      <button click.delegate="onEditPress()" type="button" class="btn btn-warning">
+        <i class="material-icons-outlined">edit</i>
+      </button>
+      <button click.delegate="onDeletePress()" type="button" class="btn btn-danger">
+        <i class="material-icons-outlined">delete</i>
+      </button>
+    </div>
+  </div>
+</template>

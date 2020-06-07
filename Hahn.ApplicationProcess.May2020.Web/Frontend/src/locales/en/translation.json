@@ -1,0 +1,57 @@
+﻿{
+  "header": {
+    "title": "Hahn Applicant Management Platform"
+  },
+
+  "main": {
+    "infoTextPre": "There are currently",
+    "infoTextSuf": "applicant(s) stored in the management platform.",
+    "addButtonText": "Add Applicant"
+  },
+
+  "form": {
+    "add": "Add",
+    "edit": "Edit",
+
+    "name": "Name",
+    "familyName": "Family Name",
+    "address": "Address",
+    "countryOfOrigin": "Country of Origin",
+    "eMailAddress": "E-Mail Address",
+    "age": "Age",
+    "hired": "Hired",
+    
+    "validation": {
+      "default": "${$displayName} is invalid.",
+      "email": "${$displayName} is not a valid email.",
+      "range": "${$displayName} must be between or equal to ${$config.min} and ${$config.max}.",
+      "required": "${$displayName} is required.",
+      "minLength": "${$displayName} must be at least ${$config.length} character${$config.length === 1 ? '' : 's'}."
+    },
+
+    "resetConfirmationText": "Are you sure you want to reset all entered data?",
+    "cancelButtonText": "Cancel",
+    "resetButtonText": "Reset",
+    "saveButtonText": "Save"
+  },
+
+  "card": {
+    "age": "Age",
+    "address": "Address",
+    "origin": "Origin"
+  },
+
+  "communication": {
+    "applicantNotFound": "The given applicant could not be found. Maybe it has been removed in the meantime.",
+    "savingFailedUnknown": "Saving failed due to mysterious reasons.",
+    "deleteConfirmationMessage": "Are you sure you want to delete applicant {name} {familyName}?",
+    "deletingFailedUnknown": "Deletion failed due to mysterious reasons."
+  },
+
+  "misc": {
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "close": "Close",
+    "applicant": "Applicant"
+  }
+}

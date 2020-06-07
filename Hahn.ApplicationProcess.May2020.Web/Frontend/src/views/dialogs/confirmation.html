@@ -1,0 +1,12 @@
+﻿<template>
+  <ux-dialog>
+    <ux-dialog-body>
+      <h6>${message}</h6>
+    </ux-dialog-body>
+
+    <ux-dialog-footer>
+      <button click.trigger="controller.cancel()" t="misc.cancel"></button>
+      <button click.trigger="controller.ok(applicant)" t="misc.ok"></button>
+    </ux-dialog-footer>
+  </ux-dialog>
+</template>

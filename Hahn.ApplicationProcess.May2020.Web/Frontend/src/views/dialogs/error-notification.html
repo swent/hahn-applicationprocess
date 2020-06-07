@@ -1,0 +1,14 @@
+﻿<template>
+  <ux-dialog>
+    <!-- Title & message-->
+    <ux-dialog-body>
+      <h6>Error</h6>
+      <p>${errorMessage}</p>
+    </ux-dialog-body>
+
+    <!-- Buttons-->
+    <ux-dialog-footer>
+      <button click.trigger="controller.ok()" t="misc.close"></button>
+    </ux-dialog-footer>
+  </ux-dialog>
+</template>

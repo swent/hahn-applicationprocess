@@ -1,0 +1,36 @@
+﻿/* Dropdown button */
+.locale-dropdown .btn {
+  display: flex;
+  flex-direction: row;
+  background-color: #e7e7e7;
+  align-items: center;
+}
+
+.locale-dropdown .locale-image {
+  width: 28px;
+  height: 20px;
+  margin-right: 0.25rem;
+}
+
+/* Flag icons */
+.locale-dropdown .locale-en {
+  background-image: url("../../static/flag-en.png");
+}
+
+.locale-dropdown .locale-de {
+  background-image: url("../../static/flag-de.png");
+}
+
+/* Menu */
+.locale-dropdown .dropdown-menu {
+  min-width: unset;
+}
+
+.locale-dropdown .dropdown-item {
+  padding: 0.25rem 1rem;
+}
+
+.dropdown-item-icon {
+  height: 20px;
+  width: 28px;
+}

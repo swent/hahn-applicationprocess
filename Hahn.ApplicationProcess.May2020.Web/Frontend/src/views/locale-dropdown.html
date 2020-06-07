@@ -1,0 +1,21 @@
+﻿<template class="locale-dropdown">
+  <require from="views/locale-dropdown.css"></require>
+  
+  <div class="dropdown">
+    
+    <!-- Dropdown button-->
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="locale-image locale-${currentLocale.toLowerCase()}"></div>
+    </button>
+    
+    <!-- Dropdown menu-->
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <template repeat.for="locale of locales">
+        <a class="dropdown-item" click.delegate="onLocaleSelect(locale)">
+          <div class="dropdown-item-icon locale-${locale}"></div>
+        </a>
+      </template>
+    </div>
+  </div>
+
+</template>

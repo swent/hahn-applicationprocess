@@ -1,0 +1,74 @@
+.applicant-card {
+  display: inline-flex;
+  margin: 0.74rem;
+  transition: margin 0.3s 0s ease-out;
+}
+
+.applicant-card .card {
+  width: 16rem;
+  border-color: #aaa;
+  transition: opacity 0.2s 0s ease-out;
+}
+
+.applicant-card.hidden .card {
+  opacity: 0;
+}
+
+/* Card pictures / avatar */
+.applicant-card .card-img-top {
+  position: relative;
+  height: 6rem;
+  overflow: hidden;
+}
+
+.applicant-card .avatar-1 {
+  background-image: url("../../static/cat1.png");
+}
+
+.applicant-card .avatar-2 {
+  background-image: url("../../static/cat2.png");
+}
+
+.applicant-card .avatar-3 {
+  background-image: url("../../static/cat3.png");
+}
+
+.applicant-card .avatar-4 {
+  background-image: url("../../static/cat4.png");
+}
+
+/* Card body */
+.applicant-card .card-body {
+  position: relative;
+  padding: 1rem 1rem 1.75rem;
+}
+
+/* Hired badge */
+.applicant-card.hired .card-body {
+  padding-bottom: 1.5rem;
+  border-bottom: 4px solid #00a200;
+}
+.applicant-card .banner-hired {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../static/badge-hired.png");
+}
+
+/* Floating buttons */
+.applicant-card button {
+  position: absolute;
+  border-radius: 1.25rem;
+  padding: 0.33rem 0.5rem 0.125rem;
+  bottom: 0.5rem;
+}
+
+.applicant-card button.btn-danger {
+  right: 0.5rem;
+}
+
+.applicant-card button.btn-warning {
+  right: 3.5rem;
+}

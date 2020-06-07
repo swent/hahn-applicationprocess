@@ -1,0 +1,57 @@
+﻿{
+  "header": {
+    "title": "Hahn Bewerberverwaltung"
+  },
+
+  "main": {
+    "infoTextPre": "Es sind momentan",
+    "infoTextSuf": "Bewerber(innen) in der Platform gespeichert.",
+    "addButtonText": "Bewerber Hinzufügen"
+  },
+
+  "form": {
+    "add": "Erstellen von",
+    "edit": "Bearbeiten von",
+
+    "name": "Name",
+    "familyName": "Nachname",
+    "address": "Adresse",
+    "countryOfOrigin": "Herkunftsland",
+    "eMailAddress": "E-Mail Adresse",
+    "age": "Alter",
+    "hired": "Eingestellt",
+
+    "validation": {
+      "default": "${$displayName} ist ungültig.",
+      "email": "${$displayName} ist keine gültige E-Mail.",
+      "range": "${$displayName} muss zwischen oder gleich ${$config.min} und ${$config.max} sein.",
+      "required": "${$displayName} ist verpflichtend.",
+      "minLength": "${$displayName} muss mindestens ${$config.length} Zeichen lang sein."
+    },
+
+    "resetConfirmationText": "Sind Sie sicher, dass Sie alle Daten löschen möchten?",
+    "cancelButtonText": "Abbrechen",
+    "resetButtonText": "Zurücksetzen",
+    "saveButtonText": "Speichern"
+  },
+
+  "card": {
+    "age": "Alter",
+    "address": "Adresse",
+    "origin": "Herkunft"
+  },
+
+  "communication": {
+    "applicantNotFound": "Der Bewerber konnte nicht gefunden werden. Möglicherweise wurde er zwischenzeitlich gelöscht.",
+    "savingFailedUnknown": "Speichern schlug aufgrund mysteriöser Gründe fehl.",
+    "deleteConfirmationMessage": "Sind Sie sicher, dass Sie den Bewerber {name} {familyName} löschen möchten?",
+    "deletingFailedUnknown": "Löschen schlug aufgrund mysteriöser Gründe fehl."
+  },
+
+  "misc": {
+    "ok": "Ok",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "applicant": "Bewerber(in)"
+  }
+}

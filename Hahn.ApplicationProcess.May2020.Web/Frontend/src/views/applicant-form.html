@@ -1,0 +1,60 @@
+<template>
+  <require from="views/applicant-form.css"></require>
+  <require from="utils/number-to-string-value-converter"></require>
+
+  <div class="modal fade" id="applicant-form" tabindex="-1" role="dialog" aria-labelledby="applicant-form-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        
+        <!-- The header-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="applicant-form-label"><span if.bind="typeof applicant.id !== 'number'" t="form.add"></span><span if.bind="typeof applicant.id === 'number'" t="form.edit"></span>&nbsp;<span t="misc.applicant"></span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- The form-->
+          <form with.two-way="applicant">
+            <div class="form-group">
+              <label for="form-name" t="form.name">Name</label>
+              <input value.bind="applicant.name & validate" keyup.delegate="onFormChange()" type="text" class="form-control" id="form-name" placeholder="${'form.name' | t}">
+            </div>
+            <div class="form-group">
+              <label for="form-family-name" t="form.familyName">Family Name</label>
+              <input value.two-way="familyName & validate" keyup.delegate="onFormChange()" type="text" class="form-control" id="form-family-name" placeholder="${'form.familyName' | t}">
+            </div>
+            <div class="form-group">
+              <label for="form-address" t="form.address">Address</label>
+              <input value.two-way="address & validate" keyup.delegate="onFormChange()" type="text" class="form-control" id="form-address" placeholder="${'form.address' | t}">
+            </div>
+            <div class="form-group">
+              <label for="form-country-of-origin" t="form.countryOfOrigin">Country of Origin</label>
+              <input value.two-way="countryOfOrigin & validate" keyup.delegate="onFormChange()" type="text" class="form-control" id="form-country-of-origin" placeholder="${'form.countryOfOrigin' | t}">
+            </div>
+            <div class="form-group">
+              <label for="form-email" t="form.eMailAddress">E-Mail Address</label>
+              <input value.two-way="eMailAddress & validate" keyup.delegate="onFormChange()" type="email" class="form-control" id="form-email" aria-describedby="emailHelp" placeholder="${'form.eMailAddress' | t}">
+            </div>
+            <div class="form-group">
+              <label for="form-age" t="form.age">Age</label>
+              <input value.two-way="age & validate" change.delegate="onFormChange()" type="number" class="form-control" id="form-age" placeholder="${'form.age' | t}">
+            </div>
+            <div class="form-group form-check">
+              <input checked.two-way="hired" change.delegate="onFormChange()" type="checkbox" class="form-check-input" id="form-hired">
+              <label class="form-check-label" for="form-hired" t="form.hired"></label>
+            </div>
+          </form>
+        </div>
+        
+        <div class="modal-footer">
+          <!-- The buttons-->
+          <button id="applicant-cancel" type="button" class="btn btn-secondary" data-dismiss="modal" t="form.cancelButtonText"></button>
+          <button click.delegate="onResetPress()" disabled.bind="formIsEmpty" id="applicant-reset" type="button" class="btn btn-danger" t="form.resetButtonText"></button>
+          <button click.delegate="onSavePress()" disabled.bind="!formIsValid" id="applicant-save" type="button" class="btn btn-primary" t="form.saveButtonText"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

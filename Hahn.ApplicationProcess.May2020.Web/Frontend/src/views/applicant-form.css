@@ -1,0 +1,8 @@
+﻿/* Styles for invalid fields */
+.form-group.has-error input.form-control {
+  border-color: red;
+}
+
+.form-group.has-error span.validation-message {
+  color: red;
+}
