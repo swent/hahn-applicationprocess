@@ -15,6 +15,8 @@ This is a small demo of an asp.net core 3.1 webservice supported by entity frame
 2. Change to your output directory and run `dotnet Hahn.ApplicationProcess.May2020.Web.dll`
 6. Open browser on `https://localhost:5001` (or `http://localhost:5000` when https has been disabled)
 
+**Publishing from your IDE might very well fail since there are lot's of problems in sdk version resolving for .net core >= 3.0.**
+
 While the backend part was pretty straight forward, there have been many struggles on my way learning the aurelia framework. As of writing this I am sure the frontend code can be improved on.
 
 All included assets have ben sourced from free to use repositories.
