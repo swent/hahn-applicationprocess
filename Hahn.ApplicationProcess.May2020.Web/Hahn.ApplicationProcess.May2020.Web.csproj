@@ -10,7 +10,7 @@
       <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.4.1" />
       <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.1" />
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.4.1" />
-      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.4.1" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
       <PackageReference Include="System.Collections" Version="4.3.0" />
       <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
     </ItemGroup>
